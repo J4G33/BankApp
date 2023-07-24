@@ -1,6 +1,9 @@
 const pulumi = require("@pulumi/pulumi");
 const aws = require("@pulumi/aws");
 
+let config = new pulumi.Config("playbank");
+let googleMapsApiKey = config.requireSecret("GOOGLE_MAPS_API_KEY");
+
 // Get the most recent Ubuntu AMI
 const ubuntu = aws.ec2.getAmi({
     mostRecent: true,
@@ -36,12 +39,13 @@ const instance = new aws.ec2.Instance("node-instance", {
     instanceType: "t2.micro",
     securityGroups: [sg.name],
     ami: ubuntu.then(ubuntu => ubuntu.id),
-    userData: `#!/bin/bash
+    userData: googleMapsApiKey.apply(key => `#!/bin/bash
+    echo "GOOGLE_MAPS_API_KEY=${key}" >> /etc/environment
     sudo apt-get update -y
     sudo apt-get install -y docker.io
     sudo systemctl start docker
     sudo systemctl enable docker
-    sudo docker run -p 80:80 --name playbank -d j23916garcia/playbank`,
+    sudo docker run -p 80:80 --name playbank -d j23916garcia/playbank`),
     tags: {
         Name: "playbank",
     },

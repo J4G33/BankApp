@@ -1,2 +1,4 @@
 config:
   aws:region: us-west-2
+  playbank:GOOGLE_MAPS_API_KEY:
+    secure: AAABAIrtTWXLDNu3U6DSfkQNR+ypdEmLV/q9s98mzitN1bNUsFRtwbUYSUtONG5eQ4CKWnVfwGm32W7JbPDIrTsBml3sPLw=
