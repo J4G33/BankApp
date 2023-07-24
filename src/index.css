@@ -1,13 +1,318 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Dongle', sans-serif;
+  font-family: 'Poppins', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  background-color: black;
+  margin: 0;
+  padding: 0;
+}
+
+
+.btn:focus {
+  outline: 2px solid #fff;
+}
+
+.bi-envelope:hover {
+  color: orange;
+}
+
+.box {
+  position: relative;
+  width: fit-content;
+  margin: 0 auto;
+  max-height: 45vh;
+  margin-top: calc(95vh - 85vh - 20px);
+  background: white;
+  border-radius: 23px;
+  padding: 10px;
+  border: none;
+  overflow: auto;
+}
+
+.card {
+  outline: 1px solid black;
+  width: 100%;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding-top: 30px;
+}
+
+.chart-container {
+  background-color: white;
+  border-radius: 4px;
+  width: 650px;
+  margin-top: 30px;
+  padding: 5px;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.custom-btn-group {
+  display: flex;
+  justify-content: space-between;
+}
+
+.custom-input-box {
+  width: 500px;
+}
+
+.custom-table {
+  height: 329px;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+/* Add the following custom CSS to your existing CSS file */
+.navbar {
+  background-color: #001200;
+}
+
+.navbar .navbar-brand {
+  color: #ffffff;
+  font-size: 1.4em;
+}
+
+.navbar .navbar-nav .nav-link {
+  color: #ffffff;
+  font-size: 1.4em;
+}
+
+.navbar .navbar-nav .nav-link:hover {
+  color: goldenrod;
+}
+
+
+
+
+.popup-box {
+  position: fixed;
+  background: #00000050;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  
+}
+
+.popup-box.active {
+  font-display: block;
+}
+
+.report-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.right-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 40px;
+}
+
+.row {
+  display: flex;
+}
+
+.userInfo-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.welcome-heading {
+  color: black;
+}
+
+.strong-text {
+  color: black;
+  font-weight: bold;
+
+}
+
+.tempe-container {
+  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.home-page {
+  color: white;
+  position: relative;
+  padding-bottom: 3rem;
+  background-color: black;
+}
+
+.home-container {
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+/* left side */
+.home-left {
+  gap: 3rem;
+}
+
+.home-title {
+  position: relative;
+  z-index: 1;
+}
+
+.home-title>h1 {
+  font-size: 600;
+  font-size: 3.8rem;
+  line-height: 4rem;
+}
+
+.orange-circle {
+  height: 5rem;
+  width: 5rem;
+  background: orange;
+  border-radius: 999px;
+  position: absolute;
+  right: 36%;
+  top: 10%;
+  z-index: -1;
+}
+
+/* right side */
+.image-container {
+width: 30rem;
+height: 35rem;
+overflow: hidden;
+border-radius: 15rem 15rem 0 0;
+border: 8px solid rgba(255, 255, 255, 0.12);
+}
+
+.image-container>img {
+width: 100%;
+height: 100%;
+}
+
+.flexColStart {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.search-bar {
+  background-color: white;
+  border-radius: 33px;
+  border: 3px solid rgb(240, 137, 154);
+  padding: 0.5rem 1rem;
+  justify-content: space-between;
+  width: flex;
+}
+
+.search-bar>input {
+  border-radius: none;
+  outline: white;
+  text-align: center;
+}
+
+.stats {
+  width: 100%;
+  justify-content: space-between;
+}
+
+.count-up {
+  display: inline-block;
+  font-size: 1.5rem; /* Adjust the font size as per your preference */
+  font-weight: bold;
+}
+
+.count-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.plus-sign {
+  color: orange; /* Set the color to orange */
+  margin-left: 10px;
+  font-size: 25px;
+
+}
+
+
+.primaryText{
+  color: white;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.secondaryText {
+  color: rgb(210, 210, 210);
+  font-size: 1.2rem;
+}
+
+.button {
+  font-weight: 500;
+  padding: 0.6rem 1.4rem;
+  color: white;
+  background-color: rgb(10, 175, 10);
+  border: none;
+  border-radius: 4px;
+  transition: all 300ms ease-in;
+}
+.button:hover {
+  background-color: rgb(246, 166, 17);
+  color: black;
+}
+
+
+
+.orangeText {
+  color: orange;
+  font-size: 2rem;
+  font-weight: 600;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.r-wrapper {
+  background-color: black;
+}
+
+
+.h1 {
+  font-family: 'Cinzel', serif;
+}
+
+.span {
+  font-family: 'Cinzel', serif;
+}
+
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.container,
+.card-container {
+  margin: 15;
+  padding: 15;
+  box-sizing: content-box;
 }
