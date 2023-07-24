@@ -7,6 +7,5 @@ RUN npm run build
 FROM nginx:alpine AS production
 WORKDIR /usr/share/nginx/html
 COPY --from=build /usr/src/app/build .
-CMD [ "node", "src/db/index.js" ]
+RUN chmod -R a+r /usr/share/nginx/html
 EXPOSE 80
-
