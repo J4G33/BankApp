@@ -3,6 +3,15 @@
 import React, { useEffect } from "react";
 import { Button, Box, createTheme, ThemeProvider } from "@mui/material";
 
+import { Loader } from "@googlemaps/js-api-loader"
+
+
+
+const loader = new Loader({
+  apiKey: process.env.GOOGLE_MAPS_API_KEY,
+  version: "weekly",
+});
+
 
 const AtmPopUp = ({ handleClose }) => {
   const handlePopupClose = () => {
@@ -13,6 +22,7 @@ const AtmPopUp = ({ handleClose }) => {
     let map;
 
     async function initMap() {
+      await loader.load();
       const position = { lat: 36.2694, lng: -104.0098 };
 
       const { Map } = await google.maps.importLibrary("maps");
