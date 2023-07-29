@@ -17,7 +17,6 @@
     "babel-jest": "^27.4.2",
     "babel-loader": "^8.2.3",
     "babel-plugin-named-asset-import": "^0.3.8",
-    "babel-preset-react-app": "^10.0.1",
     "bfj": "^7.0.2",
     "bootstrap": "^5.3.0",
     "bootstrap-icons": "^1.10.5",
@@ -115,7 +114,10 @@
     ]
   },
   "devDependencies": {
+    "@babel/preset-env": "^7.22.9",
+    "@babel/preset-react": "^7.22.5",
     "@faker-js/faker": "^8.0.2",
+    "babel-preset-react-app": "^10.0.1",
     "eslint": "^8.43.0",
     "jest": "^27.5.1",
     "json-loader": "^0.5.7"

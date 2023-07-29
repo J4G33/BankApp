@@ -102,5 +102,6 @@ app.get('/account/all', async function (req, res) {
 });
 
 var port = 6969;
-app.listen(port);
-console.log('Running on port: ' + port);
+app.listen(port, '0.0.0.0', function() {
+    console.log('Running on port: ' + port);
+});

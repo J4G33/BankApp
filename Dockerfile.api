@@ -1,0 +1,7 @@
+FROM node:12.18-alpine
+WORKDIR /usr/src/api
+COPY ["package.json", "package-lock.json*", "npm-shrinkwrap.json*", "./"]
+RUN npm install --silent
+COPY . .
+EXPOSE 6969
+CMD [ "node", "src/db/index.js" ]

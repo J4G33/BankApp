@@ -42,7 +42,8 @@ const instance = new aws.ec2.Instance("node-instance", {
     sudo apt-get install -y docker.io
     sudo systemctl start docker
     sudo systemctl enable docker
-    sudo docker run -p 80:80 --name playbank -d j23916garcia/playbank`,
+    sudo docker run -p 80:80 --name playbank -d j23916garcia/playbank
+    sudo docker run -p 6969:6969 --name playbank-api -d j23916garcia/playbank-api`,
     tags: {
         Name: "playbank",
     },

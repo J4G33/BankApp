@@ -1,4 +1,4 @@
-version: '3.8'
+version: '3'
 
 services:
   react_app:
@@ -7,3 +7,9 @@ services:
       dockerfile: Dockerfile
     ports:
       - "80:80"
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile.api
+    ports:
+      - "6969:6969"

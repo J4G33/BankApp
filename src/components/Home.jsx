@@ -255,9 +255,6 @@ const Home = () => {
 </div>
 
 
-<img src="/tempelake.jpg" className="img-fluid full-width" alt="..." />
-
-
 
       <Carousel>
         <Carousel.Item>
