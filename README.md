@@ -1,6 +1,4 @@
-( http://ec2-54-218-219-251.us-west-2.compute.amazonaws.com/ ) <-- Banking Website. try it out . .
-                                                                                              |___|
-
+( http://ec2-54-218-219-251.us-west-2.compute.amazonaws.com/ ) <-- Banking Website. try it out
 
 # Getting Started with Create React App
 
